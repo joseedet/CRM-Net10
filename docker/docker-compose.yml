@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17
+
+    container_name: crm-postgres
+
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: crm_net10
+      POSTGRES_USER: crm_admin
+      POSTGRES_PASSWORD: crm_admin
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
