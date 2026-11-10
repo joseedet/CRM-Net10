@@ -2,18 +2,24 @@
 **/bin/
 **/obj/
 **/TestResults/
+artifacts/
+publish/
 
 # IDE and user-specific files
 .vs/
 .idea/
 *.user
 *.suo
+.history/
 
 # Local environment and production settings
 .env
 .env.*
 !.env.example
 appsettings.Production.json
+*.pfx
+*.publishsettings
+*.pubxml
 
 # OS files
 .DS_Store
