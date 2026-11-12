@@ -35,7 +35,7 @@ public abstract class ObjetoValor
         return !(izquierda == derecha);
     }
     
-    public sealed class NumeroTelefono : ObjetoValor
+    /*public sealed class NumeroTelefono : ObjetoValor
     {
         public string Valor { get; }
 
@@ -52,5 +52,5 @@ public abstract class ObjetoValor
         {
             yield return Valor;
         }
-    }
+    }*/
 }

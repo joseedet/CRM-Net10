@@ -1,4 +1,5 @@
 using CRM.Web.Components;
+using CRM.Infraestructura;
 
 var builder = WebApplication.CreateBuilder(args);
 

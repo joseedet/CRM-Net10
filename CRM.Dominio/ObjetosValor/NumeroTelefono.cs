@@ -1,5 +1,5 @@
 
-namespace CRM.Dominio.ObjetoValor;
+namespace CRM.Dominio.ObjetosValor;
 
 public sealed class NumeroTelefono : ObjetoValor
 {

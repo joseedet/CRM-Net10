@@ -1,5 +1,6 @@
+using CRM.Dominio.Excepciones;
 
-namespace CRM.Dominio.ObjetoValor;
+namespace CRM.Dominio.ObjetosValor;
 
 public sealed class CorreoElectronico : ObjetoValor
 {

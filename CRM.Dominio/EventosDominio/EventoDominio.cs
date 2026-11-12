@@ -1,5 +1,5 @@
 
-namespace CRM.Dominio.EventosDominio;
+
 
 namespace CRM.Dominio.EventosDominio;
 
