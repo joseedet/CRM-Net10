@@ -1,10 +1,13 @@
-using Microsoft.AspNetCore.Identity;
+
 
 namespace CRM.Seguridad.Dominio.Entidades;
 
-public sealed class Rol : IdentityRole<Guid>
+public sealed class Rol 
 {
-    public string Descripcion { get; private set; } = string.Empty;
+    public Guid Id { get; private set; }
+    public string Nombre { get; private set; }
+    public string Descripcion { get; private set; } = string.Empty;   
+   
 
     private Rol()
     {
@@ -16,10 +19,8 @@ public sealed class Rol : IdentityRole<Guid>
     {
         Id = Guid.NewGuid();
 
-        Name = nombre;
-
-        NormalizedName = nombre.ToUpperInvariant();
-
+        Nombre = nombre;
+       
         Descripcion = descripcion;
     }
 

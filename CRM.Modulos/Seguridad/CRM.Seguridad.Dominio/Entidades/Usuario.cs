@@ -1,12 +1,14 @@
-using Microsoft.AspNetCore.Identity;
-
 namespace CRM.Seguridad.Dominio.Entidades;
 
-public sealed class Usuario : IdentityUser<Guid>
+public sealed class Usuario
 {
-    public string Nombre { get; private set; } = string.Empty;
+    public Guid Id { get; private set; }
 
-    public string Apellidos { get; private set; } = string.Empty;
+    public string Nombre { get; private set; }
+
+    public string Apellidos { get; private set; }
+
+    public string CorreoElectronico { get; private set; }
 
     public bool Activo { get; private set; }
 
@@ -29,17 +31,11 @@ public sealed class Usuario : IdentityUser<Guid>
 
         Apellidos = apellidos;
 
-        UserName = correoElectronico;
-
-        Email = correoElectronico;
-
-        NormalizedEmail = correoElectronico.ToUpperInvariant();
-
-        NormalizedUserName = correoElectronico.ToUpperInvariant();
-
-        FechaCreacion = DateTime.UtcNow;
+        CorreoElectronico = correoElectronico;
 
         Activo = true;
+
+        FechaCreacion = DateTime.UtcNow;
     }
 
     public void ActualizarDatos(
@@ -55,13 +51,13 @@ public sealed class Usuario : IdentityUser<Guid>
         UltimoAcceso = DateTime.UtcNow;
     }
 
-    public void Desactivar()
-    {
-        Activo = false;
-    }
-
     public void Activar()
     {
         Activo = true;
+    }
+
+    public void Desactivar()
+    {
+        Activo = false;
     }
 }
